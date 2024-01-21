@@ -7,9 +7,11 @@
     scroll-behavior: smooth;
 }
 
-  
+
   body {
     font-family: cursive;
+    background-color: #dbd5d5;
+    color: #333;
   }
   
   a {
@@ -79,9 +81,9 @@
     }
 
     .dp img {
-        width: 200px;
+        width: 300px;
         border-radius: 20%;
-        width: 200px;
+        height: 300px;
         border-style: double;
         border-color: black;
         border-width: 10px;
