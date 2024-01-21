@@ -3,6 +3,10 @@
     padding: 0;
     box-sizing: border-box;
   }
+  html {
+    scroll-behavior: smooth;
+}
+
   
   body {
     font-family: cursive;
@@ -18,10 +22,24 @@
     .navbar {
         display: flex;
         align-items: center;
+        position: fixed;
         justify-content: space-between;
         padding: 20px;
-        background-color: teal;
+        background-color: ;
         color: #fff;
+    }
+    .navbar {
+        display: flex;
+        background-color:teal;
+        overflow: hidden;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        color: white;
+        z-index: 1000;
     }
     
     .nav-links a {
