@@ -50,4 +50,57 @@
   .menu li {
     padding: 5px 14px;
   }
+
+#home {
+    text-align: center;
+    padding: 2em;
+}
+
+.dp{
+    margin-top: 20px;
+}
+
+.dp img {
+    width: 200px;
+    border-radius: 50%;
+}
+
+
+#about {
+    padding: 2em;
+    text-align: center; 
+}
+
+.aboutme {
+    max-width: 600px;
+    margin: 0 auto;
+    vertical-align: middle;
+}
+
+.bio {
+    margin-bottom: 2em;
+}
+
+.bio span {
+    font-weight: bold;
+    margin-right: 0.5em;
+}
+
+.education {
+
+}
+
+#projects {
+    padding: 2em;
+}
+
+.project {
+    margin-bottom: 2em;
+}
+
+#contact {
+    text-align: center;
+    padding: 2em;
+}
+
   
