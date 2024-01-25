@@ -160,32 +160,6 @@
 
     }
 
-    @keyframes slideInFromDown {
-        0% {
-            transform: translateY(50%);
-            filter: blur(10px);
-            opacity: 0;
-        }
-        100% {
-            transform: translateY(0);
-            filter: blur(0);
-            opacity: 1;
-        }
-    }
-
-    @keyframes slideInFromLeft {
-        0% {
-            transform: translateX(-50%);
-            filter: blur(10px);
-            opacity: 0;
-        }
-        100% {
-            transform: translateX(0);
-            filter: blur(0);
-            opacity: 1;
-        }
-    }
-
 
 
     @keyframes slideInFromRight {
@@ -224,16 +198,6 @@
 
     .animated {
         animation: slideInFromRight 1.5s ease-out;
-        opacity: 1; 
-    }
-
-    .animated2 {
-        animation: slideInFromLeft 1.5s ease-out;
-        opacity: 1; 
-    }
-
-    .animated1 {
-        animation: slideInFromDown 1.5s ease-out;
         opacity: 1; 
     }
 

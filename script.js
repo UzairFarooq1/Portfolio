@@ -77,40 +77,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-document.addEventListener('DOMContentLoaded', function () {
-    var about = document.querySelectorAll('#about');
-
-    var observer = new IntersectionObserver(function (entries, observer) {
-        entries.forEach(function (entry) {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('animated1');
-                observer.unobserve(entry.target); // Stop observing once the animation is triggered
-            }
-        });
-    }, { threshold: 0.5 });
-
-    about.forEach(function (card) {
-        observer.observe(card);
-    });
-});
-
-
-document.addEventListener('DOMContentLoaded', function () {
-    var contact = document.querySelectorAll('#contact-form');
-
-    var observer = new IntersectionObserver(function (entries, observer) {
-        entries.forEach(function (entry) {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('animated2');
-                observer.unobserve(entry.target); // Stop observing once the animation is triggered
-            }
-        });
-    }, { threshold: 0.5 });
-
-    contact.forEach(function (card) {
-        observer.observe(card);
-    });
-});
 
 
 
