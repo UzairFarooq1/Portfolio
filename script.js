@@ -18,6 +18,12 @@ document.addEventListener('DOMContentLoaded', function () {
         var typed = new Typed(typedOutput, options);
     }
 });
+
+function toggleMenu() {
+    var navbar = document.querySelector('.navbar');
+    navbar.classList.toggle('active');
+}
+
 document.addEventListener('DOMContentLoaded', function () {
     var talents = [
         "Web Developer",
@@ -76,6 +82,7 @@ document.addEventListener('DOMContentLoaded', function () {
         observer.observe(card);
     });
 });
+
 
 
 
