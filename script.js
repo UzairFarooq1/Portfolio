@@ -19,10 +19,22 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
-function toggleMenu() {
-    var navbar = document.querySelector('.navbar');
-    navbar.classList.toggle('active');
-}
+document.addEventListener('DOMContentLoaded', function () {
+    var menuToggle = document.querySelector('.menu-toggle');
+    var menuContainer = document.querySelector('.navbar');
+
+    menuToggle.addEventListener('click', function () {
+        menuContainer.classList.toggle('active');
+    });
+
+    // Close the menu when a navigation link is clicked
+    var navLinks = document.querySelectorAll('.nav-links a');
+    navLinks.forEach(function (link) {
+        link.addEventListener('click', function () {
+            menuContainer.classList.remove('active');
+        });
+    });
+});
 
 document.addEventListener('DOMContentLoaded', function () {
     var talents = [

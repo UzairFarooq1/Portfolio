@@ -60,33 +60,6 @@ li {
     display: flex;
 }
 
-.hamburger {
-    display: block;
-    cursor: pointer;
-    position: relative;
-    z-index: 1001; /* Ensure the hamburger is above other elements */
-}
-
-.hamburger div {
-    width: 25px;
-    height: 3px;
-    background-color: #fff;
-    margin: 6px 0;
-    transition: 0.3s;
-}
-
-.hamburger.active div:nth-child(1) {
-    transform: rotate(-45deg) translate(-5px, 6px);
-}
-
-.hamburger.active div:nth-child(2) {
-    opacity: 0;
-}
-
-.hamburger.active div:nth-child(3) {
-    transform: rotate(45deg) translate(-5px, -6px);
-}
-
 .nav-links {
     display: flex;
     gap: 1em;
@@ -311,13 +284,87 @@ button:hover {
     margin-top: 80px;
 }
 
+.menu-toggle {
+    display: none; /* Initially hide the menu button */
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    color: #fff;
+    margin-left: 200px;
+}
+
 @media only screen and (max-width: 768px) {
-    .hamburger {
-        display: block;
-    }
     .nav-links {
         display: none;
     }
+
     .navbar.active .nav-links {
         display: flex;
-        justify-content: space-around
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu-container.active {
+        flex-direction: column;
+        align-items: flex-end; /* Align items to the right */
+    }
+
+    .menu-toggle {
+        display: inline; /* Show the menu button on smaller screens */
+    }
+    /* Add styles for the animated menu */
+    .menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgba(0, 128, 128, 0.6);
+        width: 100%;
+        position: absolute;
+        top: 70px;
+        z-index: 999;
+        display: none;
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+    .menu-toggle:hover {
+        background-color: #0056b3;
+    }
+
+
+    .navbar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+
+    .menu li {
+        padding: 10px;
+    }
+
+    .about-container {
+        flex-direction: column;
+    }
+
+    .info,
+    .bio,
+    .education1,
+    .education2 {
+        width: 100%;
+    }
+
+    .project-cards {
+        margin-left: 0;
+    }
+
+    .project-card {
+        width: 100%;
+    }
+
+    form {
+        width: 100%;
+    }
+}
