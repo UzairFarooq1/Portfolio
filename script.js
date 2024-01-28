@@ -7,9 +7,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     var options = {
         strings: talents,
-        typeSpeed: 50, // typing speed in milliseconds
-        backSpeed: 20, // backspacing speed in milliseconds
-        loop: true, // loop the animation
+        typeSpeed: 50, 
+        backSpeed: 20, 
+        loop: true, 
     };
 
     var typedOutput = document.getElementById('talent');
@@ -45,9 +45,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     var options = {
         strings: talents,
-        typeSpeed: 50, // typing speed in milliseconds
-        backSpeed: 20, // backspacing speed in milliseconds
-        loop: true, // loop the animation
+        typeSpeed: 50,
+        backSpeed: 20,
+        loop: true,
     };
 
     var typedOutput = document.getElementById('skills');
@@ -66,9 +66,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     var options = {
         strings: talents,
-        typeSpeed: 50, // typing speed in milliseconds
-        backSpeed: 20, // backspacing speed in milliseconds
-        loop: true, // loop the animation
+        typeSpeed: 50,
+        backSpeed: 20,
+        loop: true,
     };
 
     var typedOutput = document.getElementById('language');
@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', function () {
         entries.forEach(function (entry) {
             if (entry.isIntersecting) {
                 entry.target.classList.add('animated');
-                observer.unobserve(entry.target); // Stop observing once the animation is triggered
+                observer.unobserve(entry.target);
             }
         });
     }, { threshold: 0.5 });
