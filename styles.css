@@ -298,6 +298,10 @@ button:hover {
         display: none;
     }
 
+    .myname{
+        font-size: smaller ;
+    }
+
     .navbar.active .nav-links {
         display: flex;
         flex-direction: column;
