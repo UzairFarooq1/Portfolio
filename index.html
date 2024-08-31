@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,400;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+
+</head>
+<body>
+    <!-- navbar start -->
+    <nav class = "navbar">
+        <a href="index.html"><i class = "fas fa-home"></i><span>Home</span></a>
+        <a href="about.html"><i class = "fas fa-user"></i><span>About</span></a>
+        <a href="projects.html"><i class = "fas fa-briefcase"></i><span>Projects</span></a>
+        <a href="contact.html"><i class = "fas fa-address-book"></i><span>Contact</span></a>
+
+    </nav>
+    <!-- navbar end -->
+    <!-- home section -->
+    <section class="home">
+        <div class="image">
+            <img src="images/prof.jpg" alt="">
+        </div>
+        
+        <div class="content">
+            <h3>Hi, I am Uzair Farooq</h3>
+            <!-- <span>Back-end Developer</span> -->
+
+            <span id="element"></span>
+            <p>Welcome to my personal portfolio! I am a passionate and dedicated university student pursuing a degree in BBIT. 
+                With a strong interest in technology and its transformative potential, I am constantly seeking opportunities to expand my knowledge and skills in this dynamic field. 
+                Throughout my academic journey, I have gained a solid foundation in areas such as programming languages, database management and network fundamentals </p>
+            <a href="about.html"class = "btn"> about me <i class = "fas fa-user"></i></a>
+            <a href="Uzair-CV.pdf" download class="btn">Download CV <i class="fas fa-download"></i></a>
+
+            <div class="whatsapp-button">
+                <span id="msg">Reach out to me</span>
+                <a href="https://api.whatsapp.com/send?phone=254791495274" target="_blank" rel="noopener noreferrer">
+                    <img src="images/whatsapp.jpg" alt="WhatsApp" />
+                    
+                </a>
+            </div>
+
+        </div>
+
+
+        
+
+
+
+
+    </section>
+
+    <!-- home end -->
+
+
+    
+
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+     <!-- Load library from the CDN -->
+  <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+          strings: ['Web Developer', 'Game Developer', 'Data Analyst',  'Graphic Designer'],
+          typeSpeed: 50,
+          loop:true
+        });
+      </script>
+</body>
+</html>
