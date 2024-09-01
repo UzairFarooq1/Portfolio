@@ -79,12 +79,12 @@
             <div class="box-container">
                 <div class="box">
                     <h3> <span>Name :</span> Uzair Farooq</h3>
-                    <h3> <span>Age : </span> 22</h3>
+                    <h3> <span>Age : </span> 24</h3>
                     <h3> <span>Email : </span> uzairf2580@gmail.com</h3>
                     <h3> <span>Address : </span> Parklands, Nairobi</h3>
                 </div>
                 <div class="box">
-                    <h3> <span>Eductaion : </span> Ongoing</h3>
+                    <h3> <span>Educataion : </span> Graduated with a degree in Business Information Technology (BBIT)</h3>
                     <h3> <span>Skills : </span> <span id="element" ></span></h3>
                     <h3> <span>Experience : </span> 3 Months</h3>
                     <h3> <span>Language : </span> English, Swahili, Urdu, Chinese, Arabic</h3>
@@ -96,7 +96,7 @@
 
         <div class="count-container">
             <div class="box">
-                <h3>5+</h3>
+                <h3 id="projectsCount">5+</h3>
                 <p>Projects Completed</p>
                 <div class="overlay">
                     <div class="text">
@@ -105,10 +105,10 @@
                         <li>3D Space Dodger Unity Game</li>
                         <a href="https://github.com/UzairFarooq1?tab=repositories" target="_blank">Read More</a>
                     </div>
-                  </div>
+                </div>
             </div>
             <div class="box">
-                <h3>3+</h3>
+                <h3 id="awardsCount">3+</h3>
                 <p>Awards Won</p>
                 <div class="overlay">
                     <div class="text">
@@ -116,10 +116,10 @@
                         <li>Certificate of Completion in Introduction to Data Science</li>
                         <a href="https://www.credly.com/badges/1889be6d-d855-4f11-a607-8056725c313b/public_url" target="_blank"><li>AWS Cloud Foundation Badge</li></a>
                     </div>
-                  </div>
+                </div>
             </div>
             <div class="box">
-                <h3>3+</h3>
+                <h3 id="collaborationsCount">3+</h3>
                 <p>Collaborations</p>
                 <div class="overlay">
                     <div style="font-size: 12px;" class="text">
@@ -127,24 +127,54 @@
                         <li>With colleague in developing cancer prediction system</li>
                         <li>With colleagues in developing multimedia space exploration project</li>
                     </div>
-                  </div>
+                </div>
             </div>
             <div class="box">
-                <h3>10+</h3>
+                <h3 id="groupProjectsCount">10+</h3>
                 <p>Group Projects</p>
                 <div class="overlay">
                     <div class="text">
-                        <li>Project on E-Commmerce using Django</li>
+                        <li>Project on E-Commerce using Django</li>
                         <li>Project on Association Rule mining using Apriori</li>
                         <a href="https://github.com/UzairFarooq1?tab=repositories" target="_blank">Read More</a>
-
-
                     </div>
-                  </div>
+                </div>
             </div>
-
         </div>
-
+        <!-- Counting animation -->
+        <script>
+            function animateValue(id, start, end, duration) {
+                const obj = document.getElementById(id);
+                const range = end - start;
+                const minTimer = 50;
+                const stepTime = Math.abs(Math.floor(duration / range));
+              
+                let startTime = new Date().getTime();
+                let endTime = startTime + duration;
+                let timer;
+        
+                function run() {
+                    let now = new Date().getTime();
+                    let remaining = Math.max((endTime - now) / duration, 0);
+                    let value = Math.round(end - (remaining * range));
+                    obj.textContent = value + "+";
+                    if (value == end) {
+                        clearInterval(timer);
+                    }
+                }
+        
+                timer = setInterval(run, stepTime);
+                run();
+            }
+        
+            document.addEventListener("DOMContentLoaded", function() {
+                animateValue("projectsCount", 1, 5, 1000);
+                animateValue("awardsCount", 1, 3, 1000);
+                animateValue("collaborationsCount", 1, 3, 1000);
+                animateValue("groupProjectsCount", 1, 10, 1000);
+            });
+        </script>
+        
 
     </div>
 </section>
@@ -155,38 +185,58 @@
     <!-- Skills Section Start -->
     <div class="skills">
         <h1 class="heading"><span>my</span> skills</h1>
-
+    
         <div class="box-container">
-            <div class="box">
+            <div class="box animate-skill">
                 <img src="images/html.png" alt="">
                 <h3>html</h3>
             </div>
-            <div class="box">
+            <div class="box animate-skill">
                 <img src="images/css.png" alt="">
                 <h3>css</h3>
             </div>
-            <div class="box">
+            <div class="box animate-skill">
                 <img src="images/python.png" alt="">
                 <h3>python</h3>
             </div>
-            <div class="box">
+            <div class="box animate-skill">
                 <img src="images/kotlin.png" alt="">
                 <h3>kotlin</h3>
             </div>
-            <div class="box">
-                <img src="images/java.png" alt="">
-                <h3>java</h3>
+            <div class="box animate-skill">
+                <img src="images/React.svg" alt="">
+                <h3>react</h3>
             </div>
-            <div class="box">
+            <div class="box animate-skill">
                 <img src="images/php.jpg" alt="">
                 <h3>php</h3>
             </div>
-            <div class="box">
+            <div class="box animate-skill">
                 <img src="images/c.png" alt="">
                 <h3>C#</h3>
             </div>
         </div>
     </div>
+
+    <!-- skills JS -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const skillElements = document.querySelectorAll('.animate-skill');
+    
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            });
+    
+            skillElements.forEach(element => {
+                observer.observe(element);
+            });
+        });
+    </script>
+    
     
 
     
@@ -195,7 +245,7 @@
     <section class="education">
         <h1 class="heading"><span>My</span> Education</h1>
         <div class="box-container">
-            <div class="box">
+            <div class="box animate-on-scroll">
                 <i class="fas fa-graduation-cap"></i>
                 <span>2008 - 2015</span>
                 <h3>Primary Education</h3>
@@ -205,9 +255,9 @@
                     <li>Football Team Captain</li>
                     <li>Best in Science Award</li>
                     <li>Best disciplined</li>
-                  </ul>
+                </ul>
             </div>
-            <div class="box">
+            <div class="box animate-on-scroll">
                 <i class="fas fa-graduation-cap"></i>
                 <span>2015 - 2019</span>
                 <h3>Secondary Education</h3>
@@ -216,10 +266,9 @@
                     <li>Attained a B+ grade</li>
                     <li>Served as a member of the Prefects body for a period of 3 years</li>
                     <li>Awarded as the best student in 2019 (Consolata Boy Award)</li>
-                  </ul>
-
+                </ul>
             </div>
-            <div class="box">
+            <div class="box animate-on-scroll">
                 <i class="fas fa-graduation-cap"></i>
                 <span>2019-2020</span>
                 <h3>Certificate in Data Science</h3>
@@ -227,51 +276,88 @@
                 <ul>
                     <li>Completed the full certificate course</li>
                     <li>Completed several data science projects</li>
-                    <li>Developed a Diabetes prediction system as final project (jupyter Notebook)</li>
-                  </ul>
+                    <li>Developed a Diabetes prediction system as final project (Jupyter Notebook)</li>
+                </ul>
             </div>
-            <div class="box">
+            <div class="box animate-on-scroll">
                 <i class="fas fa-graduation-cap"></i>
                 <span>2020 - Current</span>
                 <h3>Bachelors in Business Information Intelligence</h3>
-                <h4>Strathmore university</h4>
+                <h4>Strathmore University</h4>
                 <ul>
                     <li>Maintaining a 75 GPA</li>
                     <li>Received Certificates of Excellence </li>
                     <li>Developed several working systems</li>
                     <li>SCESA club member</li>
-                  </ul>
-                    
-
-
+                </ul>
             </div>
-            
         </div>
     </section>
 
+    <!-- education animation -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const elements = document.querySelectorAll('.animate-on-scroll');
+    
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            });
+    
+            elements.forEach(element => {
+                observer.observe(element);
+            });
+        });
+    </script>
+    
+    
+
     <div class="interests">
         <h1 class="heading"><span>my</span> Interests</h1>
-
+    
         <div class="box-container">
-            <div class="box">
+            <div class="box animate-interest">
                 <img src="images/soccer.png" alt="">
                 <h3>Soccer</h3>
             </div>
-            <div class="box">
+            <div class="box animate-interest">
                 <img src="images/coding.png" alt="">
                 <h3>coding</h3>
             </div>
-            <div class="box">
+            <div class="box animate-interest">
                 <img src="images/volunteer.png" alt="">
                 <h3>Volunteering</h3>
             </div>
-            <div class="box">
+            <div class="box animate-interest">
                 <img src="images/games.png" alt="">
                 <h3>Video Games</h3>
             </div>
         </div>
     </div>
 
+    <!-- interest js -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const interestElements = document.querySelectorAll('.animate-interest');
+    
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            });
+    
+            interestElements.forEach(element => {
+                observer.observe(element);
+            });
+        });
+    </script>
+    
+    
 
 
     <!-- education section end -->
