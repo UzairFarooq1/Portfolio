@@ -68,22 +68,19 @@
                 </div>
             </div>
 
-            <form onsubmit="sendEmail(); reset(); return false;">
-
+            <form action="https://formsubmit.co/cyberguy2580@gmail.com" method="POST">
                 <div class="inputBox">
-                    <input id="name" type="text" placeholder="Your Name">
-                    <input id="number" type="text" placeholder="Your Number">
+                    <input id="name" type="text" name="name" placeholder="Your Name" required>
+                    <input id="number" type="text" name="number" placeholder="Your Number" required>
                 </div>
                 <div class="inputBox">
-                    <input type="email" id="email" placeholder="Your Email">
-                    <input id="subject" type="text" placeholder="Your Subject">
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    <input id="subject" type="text" name="subject" placeholder="Your Subject" required>
                 </div>
-
-                <textarea name="" placeholder="Your Message" id="msg" cols="30" rows="10"></textarea>
-
+                <textarea name="message" placeholder="Your Message" id="msg" cols="30" rows="10" required></textarea>
                 <input type="submit" value="Send Message" class="btn">
-
             </form>
+            
 
         </div>
 
@@ -91,35 +88,6 @@
     <!-- contact section end -->
 
 
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script>
-        const name = document.getElementById('name');
-        const number = document.getElementById('number');
-        const email = document.getElementById('email');
-        const subject = document.getElementById('subject');
-        const msg = document.getElementById('msg');
 
-        function sendEmail(){
-            Email.send({
-                SecureToken : "aaf0e7b1-3a87-466b-b8c5-dfab9662e1d6",
-                To : 'heallight61@gmail.com',
-                From : "heallight61@gmail.com",
-                Subject : subject.value,
-                Body : `<b>Name:  </b> ${name.value}
-                        <br>
-                        <br>
-                        <b>Email: </b> ${email.value}
-                        <br>
-                        <br>
-                        <b>Phone number: </b> ${number.value}
-                        <br>
-                        <br>
-                        <b>Message: </b> ${msg.value}
-                        `
-            }).then(
-                message => alert(message)
-                );
-        }
-    </script>
 </body>
 </html>
