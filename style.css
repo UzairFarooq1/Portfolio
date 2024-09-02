@@ -629,26 +629,27 @@ section {
   background-color: #0056b3;
 }
 
-/* Profile Picture Animation */
-.image img {
-  width: 100%;
-  max-width: 300px; /* Adjust the size as needed */
-  border-radius: 50%; /* Make the image circular */
-  transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
-  animation: zoomIn 1s ease-in-out;
+/* Profile Picture Animation with Dashed Outline */
+.home .image img {
+  border: 5px solid transparent;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+  transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out, border-color 0.5s ease-in-out;
+  animation: zoomIn 1s forwards;
+}
+
+.home .image img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 25px rgba(255, 0, 0, 0.6);
+  border-color: rgba(255, 0, 0, 0.6);
 }
 
 @keyframes zoomIn {
-  from {
-    transform: scale(0.8);
+  0% {
+    transform: scale(0.9);
     opacity: 0;
   }
-  to {
+  100% {
     transform: scale(1);
     opacity: 1;
   }
-}
-.image img:hover {
-  transform: rotate(360deg) scale(1.1);
-  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
 }/*# sourceMappingURL=style.css.map */
